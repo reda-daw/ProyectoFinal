@@ -1,0 +1,33 @@
+ /* Configuración de estilos para el acta*/
+ 
+ span {
+     background-color: rgb(22, 214, 195);
+ }
+ 
+ body {
+     background-color: rgb(200, 241, 221);
+ }
+ 
+ .material-icons.prefix.red-ref-color {
+     color: red;
+ }
+ 
+ .material-icons.prefix.yellowcard-ref-color {
+     color: yellow;
+ }
+ 
+ .material-icons.prefix.melon-ref-color {
+     color: white;
+ }
+ 
+ .material-icons.prefix.bluemiddle-ref-color {
+     color: black;
+ }
+ 
+ .material-icons.prefix.greydim-ref-color {
+     color: goldenrod;
+ }
+ 
+ .material-icons.prefix.greenrussian-ref-color {
+     color: green;
+ }
