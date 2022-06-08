@@ -21,21 +21,10 @@
         <table>
             <tr>
                 <th><b>Árbitro</b></th>
-                <th><b>Dia</b></th>
-                <th><b>Hora</b></th>
-                <th><b>Jornada</b></th>
-                <th><b>Lugar</b></th>
-                <th><b>Estadio</b></th>
-                <th><b>Competición</b></th>
                 <th><b>Equipo Local</b></th>
                 <th><b>Equipo Visitante</b></th>
-                <th><b>Marcador Local</b></th>
-                <th><b>Marcador Visitante</b></th>
-                <th><b>Local Amarillas </b></th>
-                <th><b>Visitante Amarillas</b></th>
-                <th><b>Local Rojas</b></th>
-                <th><b>Visitante Rojas</b></th>
-                <th></th>
+                <th><b>Descripción</b></th>
+                
             </tr>
             <?php
             require('../Conexion/conexion.php');
@@ -47,28 +36,16 @@
 
                 $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-                $sql = "SELECT * FROM actas";
+                $sql = "SELECT * FROM anexos";
 
                 $result = $conexion->query($sql);
 
                 foreach ($result as $row) {
                     echo '<tr>';
                     echo '<td>' . $row["arbitro"] . '</td> 
-                    <td>' . $row['dia'] . '</td>
-                    <td>' . $row['hora'] . '</td>
-                    <td>' . $row['jornada'] . '</td>
-                    <td>' . $row['lugar'] . '</td>
-                    <td>' . $row["estadio"] . '</td>
-                    <td>' . $row["competicion"] . '</td>
-                    <td>' . $row["equipoLocal"] . '</td>
-                    <td>' . $row["equipoVisitante"] . '</td>
-                    <td>' . $row["marcadorLocal"] . '</td>
-                    <td>' . $row["marcadorVisitante"] . '</td>
-                    <td>' . $row["localAmarillas"] . '</td>
-                    <td>' . $row["visitanteAmarillas"] . '</td>
-                    <td>' . $row["localRojas"] . '</td>
-                    <td>' . $row["visitanteRojas"] . '</td>
-                    <td><a href="../insertar/editarActa.php?id=' . $row["id"] . '" ><i class="material-icons w3-xxlarge w3-text-khaki">create</i></td>
+                    <td>' . $row['equipolocal'] . '</td>
+                    <td>' . $row['equipovisitante'] . '</td>
+                    <td>' . $row['descripcion'] . '</td>
                     </tr>';
                 }
             } catch (PDOException $e) {

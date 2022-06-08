@@ -47,13 +47,13 @@
                 ?>
             </div>
            <!-- Boton para el logOut -->
-            <div class="w3-container" id="salir">
+            <div  id="salir">
                 <a href="logOut.php"><button class="w3-button w3-teal"><b>Salir</b></button></a>
             </div>
         </div>
         <!-- Boton para añadir usuarios -->
-        <div class="container" id="usuarios">
-            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Usuario</button>
+        <div>
+            <button type="button" id="usuarios" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Usuario</button>
             <div class="modal fade" id="myModal" role="dialog">
                 <div class="modal-dialog">
                     <!-- Contenido del Modal-->

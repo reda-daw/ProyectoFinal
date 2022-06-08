@@ -50,7 +50,7 @@
                     <th>Apellidos</th>
                     <th>Categoria</th>
                     <th>Teléfono</th>
-                    <th></th>
+                    <th>Correo</th>
                     <th></th>
                     <th></th>
 
@@ -65,7 +65,7 @@
 
                     $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-                    $sql = "SELECT id,nombreArbitro, apellidos, categoria ,telefono FROM arbitros ORDER BY categoria ASC";
+                    $sql = "SELECT id,nombreArbitro, apellidos, categoria ,telefono,correo FROM arbitros ORDER BY categoria ASC";
 
                     $result = $conexion->query($sql);
                     
@@ -75,6 +75,7 @@
                         <td>'. $row['apellidos'] .'</td>
                         <td>'. $row["categoria"] .'</td>
                         <td>'. $row["telefono"] .'</td>
+                        <td>'. $row["correo"] .'</td>
                         <td><a href="../insertar/editarArbitro.php?id='. $row["id"] .'" ><i class="material-icons w3-xxlarge w3-text-khaki">create</i></td>
                         <td><a href="../insertar/eliminarArbitro.php?id='. $row["id"] .'"><i class="material-icons w3-xxlarge w3-text-red">delete</i></td>
                         </tr>'; 

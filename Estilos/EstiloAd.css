@@ -32,7 +32,7 @@
         padding: 0px 10px;
     }
     
-    @media screen and (max-height: 450px) {
+    @media screen and (max-width: 900px) {
         .sidebar {
             padding-top: 15px;
         }
@@ -58,25 +58,18 @@
     
     #container {
         display: flex;
-        height: 120px;
+        height: 125px;
     }
     
     #salir {
         margin-left: auto;
         align-items: center;
         font-size: large;
+        display: flex;
     }
     
     #usuarios {
-        margin-left: 93.3%;
-        align-items: center;
-        font-size: large;
-    }
-    
-    .botonera {
-        display: flex;
-        justify-content: space-between;
-        width: 150%;
+        float: right;
     }
     /* Configuracion Cliente/Arbitro */
     
@@ -92,4 +85,12 @@
     
     .w3-container {
         height: 80px;
+    }
+    
+    #disponibilidades {
+        float: right;
+    }
+    
+    #anexo {
+        float: left;
     }

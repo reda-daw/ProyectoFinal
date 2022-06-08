@@ -40,15 +40,15 @@
                 echo "<h1>Bienvenid@ " . $nombre;
                 ?>
             </div>
-            <div class="w3-container" id="salir">
+            <div id="salir">
                 <a href="../Administrador/logOut.php"><button class="w3-button w3-teal"><b>Salir</b></button></a>
             </div>
         </div>
         <div class="botonera">
-        <!-- Boton para la disponibilidad -->
-        <div class="container" id="anexo">
+        <!-- Boton para el anexo -->
+        <div >
             <!-- Trigger the modal with a button -->
-            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Modal">Anexo</button>
+            <button type="button" id="anexo" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Modal">Anexo</button>
             <!-- Modal -->
             <div class="modal fade" id="Modal" role="dialog">
                 <div class="modal-dialog">
@@ -64,6 +64,12 @@
 
                                     <label for="arbitro">Árbitro:</label>
                                     <input type="text" class="form-control" id="arbitro" placeholder="Árbitro" name="arbitro">
+                                    <br>
+                                    <label for="equipolocal">Equipo Local:</label>
+                                    <input type="text" class="form-control" id="equipolocal" placeholder="Equipo Local" name="equipolocal">
+                                    <br>
+                                    <label for="equipovisitante">Equipo Visitante:</label>
+                                    <input type="text" class="form-control" id="equipovisitante" placeholder="Equipo Visitante" name="equipovisitante">
                                     <br>
                                     <label for="descripcion">Descripción:</label><br>
                                     <textarea name="descripcion" id="descripcion" cols="30" rows="5"></textarea>
@@ -84,9 +90,9 @@
             </div>
         </div>
         <!-- Boton para la disponibilidad -->
-        <div class="container" id="disponibilidades">
+        <div >
             <!-- Trigger the modal with a button -->
-            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Disponibilidad</button>
+            <button type="button" id="disponibilidades" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Disponibilidad</button>
             <!-- Modal -->
             <div class="modal fade" id="myModal" role="dialog">
                 <div class="modal-dialog">
@@ -123,6 +129,7 @@
             </div>
         </div>
         </div>
+        <br>
         <br>
         <h1><b>Información</b></h1>
 

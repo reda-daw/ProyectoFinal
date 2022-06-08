@@ -1,21 +1,18 @@
 <?php
 
 ini_set('display_errors', 1);
-
 ini_set('display_startup_errors', 1);
-
 error_reporting(E_ALL);
-
-use PHPMailer\PHPMailer\PHPMailer;
-
 
 
 require '../vendor/autoload.php';
 
+use PHPMailer\PHPMailer\PHPMailer;
+
 
 // Carga la configuración
 $config = parse_ini_file('../Conexion/configEmail.ini');
-print_r($config);
+
 $mail = new PHPMailer;
 
 $mail->isSMTP();
@@ -40,7 +37,7 @@ $mail->Username = $config['username'];
 // Clave
 $mail->Password = $config['password'];
 
-$mail->setFrom('fctnou@gmail.com', 'Registro General Fex');
+$mail->setFrom('arbitrosfex@gmail.com', 'Registro General Fex');
 
 // Los destinatarios se añaden con addAdrress()
 
@@ -50,8 +47,50 @@ $mail->addAddress($config['email'], $config['remitente']);
 
 $mail->Subject = $config['asunto'];
 
-$mail->Body = 'Prueba ';
+//Recuperamos el id del partido y construimos el body
 
+require ('../Conexion/conexion.php');
+
+$conexion = conexion();
+
+$id = $_GET['id'];
+
+
+$query = $conexion->prepare("SELECT id,competicion, grupo,jornada,equipolocal,equipovisitante,fecha,hora,campo,localidad,arbitro FROM partidos WHERE id = :id");
+$query->execute(['id' => $id]);
+$num = $query->rowCount();
+if ($num > 0) {
+    $row = $query->fetch(PDO::FETCH_ASSOC);
+}
+
+$mail->Body = "<p>Le ha sido designado la siguiente designacion.</p>
+<p>Designacion: " . $row['id'] ."</p>
+<p>Para: " . $row['arbitro'] ." <br> Fecha de comienzo: " . $row['fecha'] ." <br> Hora de comienzo: " . $row['hora'] ." <br></p>
+
+<p>Campo: " . $row['campo'] ."<br> Localidad: " . $row['localidad'] ." <br></p>
+
+<p>Competicion: " . $row['competicion'] ." <br>Grupo: " . $row['grupo'] ." <br> Equipo Local: " . $row['equipolocal'] ." <br> Equipo Visitante: " . $row['equipovisitante'] ."</p>";
+
+$mail->msgHTML("<p>Le ha sido designado la siguiente designacion.</p>
+<p>Designacion: " . $row['id'] ."</p>
+<p>Para: " . $row['arbitro'] ." <br> Fecha de comienzo: " . $row['fecha'] ." <br> Hora de comienzo: " . $row['hora'] ." <br></p>
+
+<p>Campo: " . $row['campo'] ."<br> Localidad: " . $row['localidad'] ." <br></p>
+
+<p>Competicion: " . $row['competicion'] ." <br>Grupo: " . $row['grupo'] ." <br> Equipo Local: " . $row['equipolocal'] ." <br> Equipo Visitante: " . $row['equipovisitante'] ."</p>");
+
+
+//Adjuntar una imagen
+$mail->addAttachment('../Iconos/RFEF.png');
+
+
+$mail->smtpConnect([
+   'ssl' => [
+        'verify_peer' => false,
+        'verify_peer_name' => false,
+        'allow_self_signed' => true
+    ]
+]);
 
 
 // Enviar
@@ -61,7 +100,7 @@ if (!$mail->send()) {
 
 } else {
 
-   echo 'El email ha sido enviado correctamente.';
+   echo '<script language="javascript">alert("Correo Enviado");window.location.href="../Administrador/partidos.php"</script>';
 
 }
 
