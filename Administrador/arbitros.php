@@ -21,11 +21,11 @@
             <i class="fas fa-home"></i>
             <span>Home</span>
         </a>
-        <a href="ListadoActas.php">
+        <a href="../actas/listadoActas.php">
             <i class="fas fa-book"></i>
             <span>Listado de actas</span>
         </a>
-        <a href="ListadoAnexos.php">
+        <a href="../actas/listadoAnexos.php">
             <i class="fas fa-book"></i>
             <span>Anexos</span>
         </a>
@@ -39,8 +39,8 @@
         </div>
         <br>
         <div class="w3-container">
-            <a href="../insertar/InsertarArbitro.html"><button class="w3-button w3-circle w3-teal">+</button></a>
-            <a href="administrador.php"><button class="w3-btn w3-white w3-border w3-border-teal w3-round-large">Volver</button></a>
+            <a href="../insertar/insertarArbitro.html"><button class="w3-button w3-circle w3-teal">+</button></a>
+            <a href="../Administrador/administrador.php"><button class="w3-btn w3-white w3-border w3-border-teal w3-round-large">Volver</button></a>
         </div>
         <br>
         <div style="overflow-x: auto;">
@@ -76,8 +76,8 @@
                         <td>'. $row["categoria"] .'</td>
                         <td>'. $row["telefono"] .'</td>
                         <td>'. $row["correo"] .'</td>
-                        <td><a href="../insertar/editarArbitro.php?id='. $row["id"] .'" ><i class="material-icons w3-xxlarge w3-text-khaki">create</i></td>
-                        <td><a href="../insertar/eliminarArbitro.php?id='. $row["id"] .'"><i class="material-icons w3-xxlarge w3-text-red">delete</i></td>
+                        <td><a href="../editar/editarArbitro.php?id='. $row["id"] .'" ><i class="material-icons w3-xxlarge w3-text-khaki">create</i></td>
+                        <td><a href="../eliminar/eliminarArbitro.php?id='. $row["id"] .'"><i class="material-icons w3-xxlarge w3-text-red">delete</i></td>
                         </tr>'; 
                     }
                 } catch (PDOException $e) {
@@ -89,8 +89,8 @@
         </div>
         <br>
         <div class="w3-container">
-            <a href="../insertar/InsertarArbitro.html"><button class="w3-button w3-circle w3-teal">+</button></a>
-            <a href="administrador.php"><button class="w3-btn w3-white w3-border w3-border-teal w3-round-large">Volver</button></a>
+            <a href="../insertar/insertarArbitro.html"><button class="w3-button w3-circle w3-teal">+</button></a>
+            <a href="../Administrador/administrador.php"><button class="w3-btn w3-white w3-border w3-border-teal w3-round-large">Volver</button></a>
         </div>
 
     </div>

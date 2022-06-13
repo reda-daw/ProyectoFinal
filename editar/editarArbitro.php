@@ -22,7 +22,7 @@ if ($num > 0) {
 <html lang="en">
 
 <head>
-    <title>Insertar Árbitro</title>
+    <title>Editar Árbitro</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -34,7 +34,7 @@ if ($num > 0) {
 
 <body style="background-color: rgb(200, 241, 221)">
     <div class="container mt-3">
-        <h2>Añadir Árbitro</h2>
+        <h2>Editar Árbitro</h2>
         <form action="guardarDatosEditadosArbitro.php" method="post">
 		<div class="mb-3 mt-3">
                 <input type="hidden" class="form-control" id="id" placeholder="ID" name="id" value="<?php echo $row['id']; ?>">

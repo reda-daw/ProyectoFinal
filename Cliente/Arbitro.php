@@ -21,7 +21,7 @@
             <span>Home</span>
         </a>
 
-        <a href="../insertar/acta.html">
+        <a href="../actas/acta.html">
             <i class="fas fa-book"></i>
             <span>Gestion de actas</span>
         </a>
@@ -41,25 +41,22 @@
                 ?>
             </div>
             <div id="salir">
-                <a href="../Administrador/logOut.php"><button class="w3-button w3-teal"><b>Salir</b></button></a>
+                <a href="../loginLogOut/logOut.php"><button class="w3-button w3-teal"><b>Salir</b></button></a>
             </div>
         </div>
         <div class="botonera">
         <!-- Boton para el anexo -->
         <div >
-            <!-- Trigger the modal with a button -->
             <button type="button" id="anexo" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Modal">Anexo</button>
-            <!-- Modal -->
             <div class="modal fade" id="Modal" role="dialog">
                 <div class="modal-dialog">
-                    <!-- Modal content-->
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                             <h4 class="modal-title">Anexo</h4>
                         </div>
                         <div class="modal-body">
-                            <form action="../insertar/anexos.php" method="post">
+                            <form action="../actas/anexos.php" method="post">
                                 <div class="w33-container">
 
                                     <label for="arbitro">Árbitro:</label>
@@ -91,12 +88,9 @@
         </div>
         <!-- Boton para la disponibilidad -->
         <div >
-            <!-- Trigger the modal with a button -->
             <button type="button" id="disponibilidades" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Disponibilidad</button>
-            <!-- Modal -->
             <div class="modal fade" id="myModal" role="dialog">
                 <div class="modal-dialog">
-                    <!-- Modal content-->
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal">&times;</button>

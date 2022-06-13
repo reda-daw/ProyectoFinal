@@ -91,8 +91,8 @@
         </div>
         <br>
         <div class="w3-container">
-            <a href="../insertar/InsertarPartido.html"><button class="w3-button w3-circle w3-teal">+</button></a>
-            <a href="administrador.php"><button class="w3-btn w3-white w3-border w3-border-teal w3-round-large">Volver</button></a>
+            <a href="../insertar/insertarPartido.html"><button class="w3-button w3-circle w3-teal">+</button></a>
+            <a href="../Administrador/administrador.php"><button class="w3-btn w3-white w3-border w3-border-teal w3-round-large">Volver</button></a>
         </div>
         <br>
         <div style="overflow-x: auto;">
@@ -108,6 +108,8 @@
                     <th>Campo</th>
                     <th>Localidad</th>
                     <th>Árbitro</th>
+                    <th>Asistente1</th>
+                    <th>Asistente2</th>
                     <th></th>
                     <th></th>
                     <th></th>
@@ -138,10 +140,12 @@
                     <td>'. $row['campo'] .'</td>
                     <td>'. $row["localidad"] .'</td>
                     <td>'. $row["arbitro"] .'</td> 
+                    <td>'. $row["asistenteUno"] .'</td> 
+                    <td>'. $row["asistenteDos"] .'</td> 
                    
-                    <td><a href="../insertar/editarPartido.php?id='. $row["id"] .'"><i class="material-icons w3-xxlarge w3-text-khaki">create</i></td>
-                    <td><a href="../insertar/eliminarPartido.php?id='. $row["id"] .'"><i class="material-icons w3-xxlarge w3-text-red">delete</i></td>
-                    <td><a href="../insertar/enviarCorreo.php?id='. $row["id"] .'"><i class="material-icons w3-xxlarge w3-text-teal">send</i></td>
+                    <td><a href="../editar/editarPartido.php?id='. $row["id"] .'"><i class="material-icons w3-xxlarge w3-text-khaki">create</i></td>
+                    <td><a href="../eliminar/eliminarPartido.php?id='. $row["id"] .'"><i class="material-icons w3-xxlarge w3-text-red">delete</i></td>
+                    <td><a href="../correo/enviarCorreo.php?id='. $row["id"] .'"><i class="material-icons w3-xxlarge w3-text-teal">send</i></td>
                     </tr>'; 
                 }
             } catch (PDOException $e) {
@@ -153,8 +157,8 @@
         </div>
         <br>
         <div class="w3-container">
-            <a href="../insertar/InsertarPartido.html"><button class="w3-button w3-circle w3-teal">+</button></a>
-            <a href="administrador.php"><button class="w3-btn w3-white w3-border w3-border-teal w3-round-large">Volver</button></a>
+            <a href="../insertar/insertarPartido.html"><button class="w3-button w3-circle w3-teal">+</button></a>
+            <a href="../Administrador/administrador.php"><button class="w3-btn w3-white w3-border w3-border-teal w3-round-large">Volver</button></a>
         </div>
 
     </div>

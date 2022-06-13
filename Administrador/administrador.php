@@ -31,6 +31,10 @@
             <i class="fas fa-futbol"></i>
             <span>Partidos</span>
         </a>
+        <a href="usuario.php">
+            <i class="fas fa-child"></i>
+            <span>Usuarios</span>
+        </a>
     </div>
 
     <div class="main">
@@ -48,7 +52,7 @@
             </div>
            <!-- Boton para el logOut -->
             <div  id="salir">
-                <a href="logOut.php"><button class="w3-button w3-teal"><b>Salir</b></button></a>
+                <a href="../loginLogOut/logOut.php"><button class="w3-button w3-teal"><b>Salir</b></button></a>
             </div>
         </div>
         <!-- Boton para añadir usuarios -->
@@ -90,7 +94,7 @@
 
             </div>
         </div>
-        <h1><b>Disponibilidad de los árbitros</b><a href="../insertar/refrescarTabla.php"><i class="material-icons w3-xlarge ">refresh</i></a></h1>
+        <h1><b>Disponibilidad de los árbitros</b><a href="../eliminar/refrescarTabla.php"><i class="material-icons w3-xlarge ">refresh</i></a></h1>
         
         <div style="overflow-x: auto;">
 

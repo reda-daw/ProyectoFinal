@@ -24,9 +24,13 @@
 
     $arbitro = $_POST['arbitro'];
 
+    $asistenteuno = $_POST['asistenteuno'];
+
+    $asistentedos = $_POST['asistentedos'];
+
     try {
         $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = "INSERT INTO partidos (competicion, grupo,jornada, equipolocal,equipovisitante,fecha,hora,campo,localidad,arbitro) VALUES ('$competicion', '$grupo','$jornada','$equipolocal','$equipovisitante','$fecha','$hora','$campo','$localidad','$arbitro')";
+        $sql = "INSERT INTO partidos (competicion, grupo,jornada, equipolocal,equipovisitante,fecha,hora,campo,localidad,arbitro,asistenteuno,asistentedos) VALUES ('$competicion', '$grupo','$jornada','$equipolocal','$equipovisitante','$fecha','$hora','$campo','$localidad','$arbitro','$asistenteuno','$asistentedos')";
         $result = $conexion->query($sql);
        //header("location:../Administrador/partidos.html");
        echo '<script language="javascript">alert("Insertado Correctamente");window.location.href="../Administrador/partidos.php"</script>';

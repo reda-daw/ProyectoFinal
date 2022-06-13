@@ -7,7 +7,7 @@ $conexion = conexion();
 $id = $_GET['id'];
 
 
-$query = $conexion->prepare("SELECT id,competicion, grupo,jornada,equipolocal,equipovisitante,fecha,hora,campo,localidad,arbitro FROM partidos WHERE id = :id");
+$query = $conexion->prepare("SELECT id,competicion, grupo,jornada,equipolocal,equipovisitante,fecha,hora,campo,localidad,arbitro,asistenteuno,asistentedos FROM partidos WHERE id = :id");
 $query->execute(['id' => $id]);
 $num = $query->rowCount();
 if ($num > 0) {
@@ -21,7 +21,7 @@ if ($num > 0) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Insertar Partido</title>
+    <title>Editar Partido</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -33,7 +33,7 @@ if ($num > 0) {
 
 <body style="background-color: rgb(200, 241, 221)">
     <div class="container mt-3">
-        <h2>Añadir Partido</h2>
+        <h2>Editar Partido</h2>
         <form action="guardarDatosEditadosPartidos.php" method="post">
         <div class="mb-3 mt-3">
                 <input type="hidden" class="form-control" id="id" placeholder="ID" name="id" value="<?php echo $row['id']; ?>">
@@ -77,6 +77,14 @@ if ($num > 0) {
             <div class="mb-3">
                 <label for="arbitro">Árbitro:</label>
                 <input type="text" class="form-control" id="arbitro" placeholder="Ábitro" name="arbitro" value="<?php echo $row['arbitro']; ?>">
+            </div>
+            <div class="mb-3">
+                <label for="asistenteuno">Asistente 1:</label>
+                <input type="text" class="form-control" id="asistenteuno" placeholder="Asistente 1" name="asistenteuno" value="<?php echo $row['asistenteuno']; ?>">
+            </div>
+            <div class="mb-3">
+                <label for="asistentedos">Asistente 2:</label>
+                <input type="text" class="form-control" id="asistentedos" placeholder="Asistente 2" name="asistentedos" value="<?php echo $row['asistentedos']; ?>">
             </div>
             <button type="submit" class="w3-btn w3-white w3-border w3-border-blue w3-round-large">Añadir</button>
             <a href="../Administrador/partidos.php"><button type="button" class="w3-btn w3-white w3-border w3-border-teal w3-round-large">Volver</button></a>

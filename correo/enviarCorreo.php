@@ -56,7 +56,7 @@ $conexion = conexion();
 $id = $_GET['id'];
 
 
-$query = $conexion->prepare("SELECT id,competicion, grupo,jornada,equipolocal,equipovisitante,fecha,hora,campo,localidad,arbitro FROM partidos WHERE id = :id");
+$query = $conexion->prepare("SELECT id,competicion, grupo,jornada,equipolocal,equipovisitante,fecha,hora,campo,localidad,arbitro,asistenteuno,asistentedos FROM partidos WHERE id = :id");
 $query->execute(['id' => $id]);
 $num = $query->rowCount();
 if ($num > 0) {
@@ -69,7 +69,10 @@ $mail->Body = "<p>Le ha sido designado la siguiente designacion.</p>
 
 <p>Campo: " . $row['campo'] ."<br> Localidad: " . $row['localidad'] ." <br></p>
 
-<p>Competicion: " . $row['competicion'] ." <br>Grupo: " . $row['grupo'] ." <br> Equipo Local: " . $row['equipolocal'] ." <br> Equipo Visitante: " . $row['equipovisitante'] ."</p>";
+<p>Competicion: " . $row['competicion'] ." <br>Grupo: " . $row['grupo'] ." <br> Equipo Local: " . $row['equipolocal'] ." <br> Equipo Visitante: " . $row['equipovisitante'] ."</p>
+<p> Actuando como:</p>
+<p>Asistente: " . $row['asistenteuno'] ." , 1 </p>
+<p>Asistente: " . $row['asistentedos'] ." , 2 </p>";
 
 $mail->msgHTML("<p>Le ha sido designado la siguiente designacion.</p>
 <p>Designacion: " . $row['id'] ."</p>
@@ -77,7 +80,10 @@ $mail->msgHTML("<p>Le ha sido designado la siguiente designacion.</p>
 
 <p>Campo: " . $row['campo'] ."<br> Localidad: " . $row['localidad'] ." <br></p>
 
-<p>Competicion: " . $row['competicion'] ." <br>Grupo: " . $row['grupo'] ." <br> Equipo Local: " . $row['equipolocal'] ." <br> Equipo Visitante: " . $row['equipovisitante'] ."</p>");
+<p>Competicion: " . $row['competicion'] ." <br>Grupo: " . $row['grupo'] ." <br> Equipo Local: " . $row['equipolocal'] ." <br> Equipo Visitante: " . $row['equipovisitante'] ."</p>
+<p> Actuando como:</p>
+<p>Asistente: " . $row['asistenteuno'] ." , 1 </p>
+<p>Asistente: " . $row['asistentedos'] ." , 2 </p>");
 
 
 //Adjuntar una imagen

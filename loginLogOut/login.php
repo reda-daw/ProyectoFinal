@@ -29,7 +29,7 @@ try {
             if (substr($clave, 0 ,2) == 'AD') {
                 echo $_SESSION['nombre'];
                 echo $_SESSION['perfil'];
-                header("location:administrador.php");
+                header("location:../Administrador/administrador.php");
                 //$coleccion->insertOne(['nombre' => "hoal", 'perfil' => "ADM"]);
             } else if (substr($clave, 0 ,2) == 'AR') {
                 echo $_SESSION['nombre'];
