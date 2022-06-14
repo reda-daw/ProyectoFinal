@@ -25,45 +25,45 @@
         <form action="acta.php" method="post">
             <div class="mb-3">
                 <i class="material-icons prefix bluemiddle-ref-color">people</i>
-                <input type="text" class="form-control" id="arbitro" placeholder="Árbitro" name="arbitro">
+                <input type="text" class="form-control" id="arbitro" placeholder="Árbitro" name="arbitro" required>
             </div>
             <div class="mb-3">
                 <i class="material-icons prefix bluemiddle-ref-color">event</i>
-                <input type="date" class="form-control" id="dia" placeholder="dia" name="dia">
+                <input type="date" class="form-control" id="dia" placeholder="dia" name="dia" required>
             </div>
             <div class="mb-3">
                 <i class="material-icons prefix bluemiddle-ref-color">schedule</i>
-                <input type="time" class="form-control" id="hora" placeholder="Hora" name="hora">
+                <input type="time" class="form-control" id="hora" placeholder="Hora" name="hora" required>
             </div>
             <div class="mb-3">
                 <i class="material-icons prefix bluemiddle-ref-color">pin</i>
-                <input type="text" class="form-control" id="jornada" placeholder="Jornada" name="jornada">
+                <input type="text" class="form-control" id="jornada" placeholder="Jornada" name="jornada" required>
             </div>
             <div class="mb-3">
                 <span><b>Lugar del partido</b></span>
             </div>
             <div class="mb-3">
                 <i class="material-icons prefix bluemiddle-ref-color">place</i>
-                <input placeholder="Lugar" id="lugar" name="lugar" type="text" class="form-control">
+                <input placeholder="Lugar" id="lugar" name="lugar" type="text" class="form-control" required>
             </div>
             <div class="mb-3">
                 <i class="material-icons prefix greenrussian-ref-color">grass</i>
-                <input placeholder="Estadio" id="estadio" name="estadio" type="text" class="form-control">
+                <input placeholder="Estadio" id="estadio" name="estadio" type="text" class="form-control" required>
             </div>
             <div class="mb-3">
                 <span><b>Datos del partido</b></span>
             </div>
             <div class="mb-3">
                 <i class="material-icons prefix greydim-ref-color">emoji_events</i>
-                <input placeholder="Competicion" id="competicion" name="competicion" type="text" class="form-control">
+                <input placeholder="Competicion" id="competicion" name="competicion" type="text" class="form-control" required>
             </div>
             <div class="mb-3">
                 <i class="material-icons prefix bluemiddle-ref-color">shield</i>
-                <input placeholder="Equipo Local" id="equipolocal" name="equipolocal" type="text" class="form-control">
+                <input placeholder="Equipo Local" id="equipolocal" name="equipolocal" type="text" class="form-control" required>
             </div>
             <div class="mb-3">
                 <i class="material-icons prefix melon-ref-color">shield</i>
-                <input placeholder="Equipo Visitante" id="equipovisitante" name="equipovisitante" type="text" class="form-control">
+                <input placeholder="Equipo Visitante" id="equipovisitante" name="equipovisitante" type="text" class="form-control" required>
             </div>
 
             <div class="mb-3">
@@ -71,11 +71,11 @@
             </div>
             <div class="mb-3">
                 <i class="material-icons prefix bluemiddle-ref-color">shield</i>
-                <input placeholder="Marcador local" class="form-control" type="number" name="marcadorlocal" id="marcadorlocal" min="0" step="1" />
+                <input placeholder="Marcador local" class="form-control" type="number" name="marcadorlocal" id="marcadorlocal" min="0" step="1" required/>
             </div>
             <div class="mb-3">
                 <i class="material-icons prefix melon-ref-color">shield</i>
-                <input placeholder="Marcador Visitante" class="form-control" type="number" name="marcadorvisitante" id="marcadorvisitante" min="0" step="1" />
+                <input placeholder="Marcador Visitante" class="form-control" type="number" name="marcadorvisitante" id="marcadorvisitante" min="0" step="1" required/>
             </div>
 
             <div class="mb-3 ">
@@ -83,22 +83,22 @@
             </div>
             <div class="mb-3 ">
                 <i class="material-icons prefix yellowcard-ref-color ">square</i>
-                <input placeholder="Amarillas local" class="form-control" type="number" name="localamarillas" id="localamarillas" min="0 " step="1" />
+                <input placeholder="Amarillas local" class="form-control" type="number" name="localamarillas" id="localamarillas" min="0 " step="1" required />
             </div>
             <div class="mb-3 ">
                 <i class="material-icons prefix yellowcard-ref-color ">square</i>
-                <input placeholder="Amarillas Visitante" class="form-control" type="number" name="visitanteamarillas" id="visitanteamarillas" min="0" step="1" />
+                <input placeholder="Amarillas Visitante" class="form-control" type="number" name="visitanteamarillas" id="visitanteamarillas" min="0" step="1" required/>
             </div>
             <div class="mb-3 ">
                 <span><b>Rojas</b></span>
             </div>
             <div class="mb-3 ">
                 <i class="material-icons prefix red-ref-color">square</i>
-                <input placeholder="Rojas Local" class="form-control" type="number" name="localrojas" id="localrojas" min="0" step="1" />
+                <input placeholder="Rojas Local" class="form-control" type="number" name="localrojas" id="localrojas" min="0" step="1" required />
             </div>
             <div class="mb-3 ">
                 <i class="material-icons prefix red-ref-color ">square</i>
-                <input placeholder="Rojas Visitante" class="form-control" type="number" name="visitanterojas" id="visitanterojas" min="0" step="1" />
+                <input placeholder="Rojas Visitante" class="form-control" type="number" name="visitanterojas" id="visitanterojas" min="0" step="1" required />
             </div>
             <br>
             <button type="submit" class="w3-btn w3-white w3-border w3-border-blue w3-round-large">Grabar Datos</button>

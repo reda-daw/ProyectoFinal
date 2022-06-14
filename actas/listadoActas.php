@@ -68,7 +68,7 @@
                     <td>' . $row["visitanteAmarillas"] . '</td>
                     <td>' . $row["localRojas"] . '</td>
                     <td>' . $row["visitanteRojas"] . '</td>
-                    <td><a href="../insertar/editarActa.php?id=' . $row["id"] . '" ><i class="material-icons w3-xxlarge w3-text-khaki">create</i></td>
+                    <td><a href="../editar/editarActa.php?id=' . $row["id"] . '" ><i class="material-icons w3-xxlarge w3-text-khaki">create</i></td>
                     </tr>';
                 }
             } catch (PDOException $e) {
@@ -80,7 +80,7 @@
     </div>
     <br>
     <div class="w3-container">
-        <a href="arbitros.php"><button class="w3-btn w3-white w3-border w3-border-teal w3-round-large">Volver</button></a>
+        <a href="../Administrador/arbitros.php"><button class="w3-btn w3-white w3-border w3-border-teal w3-round-large">Volver</button></a>
     </div>
 </body>
 

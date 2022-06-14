@@ -60,16 +60,16 @@
                                 <div class="w33-container">
 
                                     <label for="arbitro">Árbitro:</label>
-                                    <input type="text" class="form-control" id="arbitro" placeholder="Árbitro" name="arbitro">
+                                    <input type="text" class="form-control" id="arbitro" placeholder="Árbitro" name="arbitro" required>
                                     <br>
                                     <label for="equipolocal">Equipo Local:</label>
-                                    <input type="text" class="form-control" id="equipolocal" placeholder="Equipo Local" name="equipolocal">
+                                    <input type="text" class="form-control" id="equipolocal" placeholder="Equipo Local" name="equipolocal" required>
                                     <br>
                                     <label for="equipovisitante">Equipo Visitante:</label>
-                                    <input type="text" class="form-control" id="equipovisitante" placeholder="Equipo Visitante" name="equipovisitante">
+                                    <input type="text" class="form-control" id="equipovisitante" placeholder="Equipo Visitante" name="equipovisitante" required>
                                     <br>
                                     <label for="descripcion">Descripción:</label><br>
-                                    <textarea name="descripcion" id="descripcion" cols="30" rows="5"></textarea>
+                                    <textarea name="descripcion" id="descripcion" cols="30" rows="5" required></textarea>
                                     <br>
                                     <br>
                                     <button type="submit" class="w3-btn w3-white w3-border w3-border-blue w3-round-large">Enviar</button>
@@ -101,13 +101,13 @@
                                 <div class="w33-container">
 
                                     <label for="nombre">Nombre:</label>
-                                    <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre">
+                                    <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre" required>
 
                                     <label for="apellidos">Apellidos:</label>
-                                    <input type="text" class="form-control" id="apellidos" placeholder="Apellidos" name="apellidos">
+                                    <input type="text" class="form-control" id="apellidos" placeholder="Apellidos" name="apellidos" required>
 
                                     <label for="disponibilidad">Disponibilidad:</label>
-                                    <input type="text" class="form-control" id="disponibilidad" placeholder="Disponibilidad" name="disponibilidad">
+                                    <input type="text" class="form-control" id="disponibilidad" placeholder="Disponibilidad" name="disponibilidad" required>
 
                                     <button type="submit" class="w3-btn w3-white w3-border w3-border-blue w3-round-large">Enviar</button>
                                 </div>

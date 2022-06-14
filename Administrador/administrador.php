@@ -70,16 +70,16 @@
                             <form action="../insertar/insertarUsuario.php" method="post">
                                 <div class="w33-container">
                                         <label for="nombre">Nombre:</label>
-                                        <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre">
+                                        <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre" require>
 
                                         <label for="usuario">Usuario:</label>
-                                        <input type="text" class="form-control" id="usuario" placeholder="Usuario" name="usuario"> 
+                                        <input type="text" class="form-control" id="usuario" placeholder="Usuario" name="usuario" require> 
 
                                         <label for="contraseña">Contraseña:</label>
-                                        <input type="password" class="form-control" id="contraseña" placeholder="Contraseña" name="contraseña">
+                                        <input type="password" class="form-control" id="contrasena" placeholder="Contraseña" name="contrasena" require>
 
                                         <label for="perfil">Perfil:</label>
-                                        <input type="text" class="form-control" id="perfil" placeholder="Perfil" name="perfil">
+                                        <input type="text" class="form-control" id="perfil" placeholder="Perfil" name="perfil" require>
 
                                         <button type="submit" class="w3-btn w3-white w3-border w3-border-blue w3-round-large">Añadir</button>
                                 </div>

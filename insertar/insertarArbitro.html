@@ -18,23 +18,23 @@
         <form action="insertarArbitro.php" method="post">
             <div class="mb-3 mt-3">
                 <label for="nombre">Nombre:</label>
-                <input type="text" class="form-control" id="nombreArbitro" placeholder="Nombre" name="nombreArbitro">
+                <input type="text" class="form-control" id="nombreArbitro" placeholder="Nombre" name="nombreArbitro" required>
             </div>
             <div class="mb-3 mt-3">
                 <label for="apellidos">Apellidos:</label>
-                <input type="text" class="form-control" id="apellidos" placeholder="Apellidos" name="apellidos">
+                <input type="text" class="form-control" id="apellidos" placeholder="Apellidos" name="apellidos" required>
             </div>
             <div class="mb-3 mt-3">
                 <label for="categoria">Categoria:</label>
-                <input type="text" class="form-control" id="categoria" placeholder="Categoria" name="categoria">
+                <input type="text" class="form-control" id="categoria" placeholder="Categoria" name="categoria" required>
             </div>
             <div class="mb-3">
                 <label for="correo">Correo:</label>
-                <input type="email" class="form-control" id="correo" placeholder="Correo" name="correo">
+                <input type="email" class="form-control" id="correo" placeholder="Correo" name="correo" required>
             </div>
             <div class="mb-3">
                 <label for="telefono">Telefono:</label>
-                <input type="tel" class="form-control" id="telefono" placeholder="Teléfono" name="telefono">
+                <input type="tel" class="form-control" id="telefono" placeholder="Teléfono" name="telefono" required>
             </div>
             <button type="submit" class="w3-btn w3-white w3-border w3-border-blue w3-round-large">Añadir</button>
             <a href="../Administrador/arbitros.php"><button type="button" class="w3-btn w3-white w3-border w3-border-teal w3-round-large">Volver</button></a>

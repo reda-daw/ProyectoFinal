@@ -61,7 +61,7 @@
         if(!$sql->execute()){
             print "Error al editar";
         }else{
-        echo '<script language="javascript">alert("Acta Editado");window.location.href="../Administrador/ListadoActas.php"</script>';
+        echo '<script language="javascript">alert("Acta Editado");window.location.href="../actas/listadoActas.php"</script>';
         }
     } catch (PDOException $e) {
 

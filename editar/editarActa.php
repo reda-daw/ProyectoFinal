@@ -125,7 +125,7 @@ if ($num > 0) {
             </div>
             <br>
             <button type="submit" class="w3-btn w3-white w3-border w3-border-blue w3-round-large">Grabar Datos</button>
-            <a href="../Administrador/ListadoActas.php"><button type="button" class="w3-btn w3-white w3-border w3-border-teal w3-round-large">Volver</button></a>
+            <a href="../actas/listadoActas.php"><button type="button" class="w3-btn w3-white w3-border w3-border-teal w3-round-large">Volver</button></a>
         </form>
     </div>
 </body>

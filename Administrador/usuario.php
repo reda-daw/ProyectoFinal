@@ -43,7 +43,7 @@
                     echo '<tr>';
                     echo '<td>' . $row["nombre"] . '</td> 
                     <td>' . $row['usuario'] . '</td>
-                    <td>' . $row['contraseña'] . '</td>
+                    <td>' . $row['contrasena'] . '</td>
                     <td>' . $row['perfil'] . '</td>
                     <td><a href="../eliminar/eliminarUsuario.php?id='. $row["id"] .'"><i class="material-icons w3-xxlarge w3-text-red">delete</i></td>
                     </tr>';
